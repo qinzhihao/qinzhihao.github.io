@@ -5,9 +5,7 @@
   
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="HTMLHTML Attributessyntax:
-&amp;lt;p name=&amp;quot;value&amp;quot; &amp;gt; text &amp;lt;/p&amp;gt;
-
+  <meta name="description" content="HTMLHTML Attributessyntax:&amp;lt;p name=&amp;quot;value&amp;quot; &amp;gt; text &amp;lt;/p&amp;gt;
 
 
 
@@ -29,14 +27,13 @@ href
 address information for links
 
 
-width height">
+width height
+s">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://yoursite.com/2016/06/25/html笔记/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="HTMLHTML Attributessyntax:
-&amp;lt;p name=&amp;quot;value&amp;quot; &amp;gt; text &amp;lt;/p&amp;gt;
-
+<meta property="og:description" content="HTMLHTML Attributessyntax:&amp;lt;p name=&amp;quot;value&amp;quot; &amp;gt; text &amp;lt;/p&amp;gt;
 
 
 
@@ -58,13 +55,12 @@ href
 address information for links
 
 
-width height">
-<meta property="og:updated_time" content="2016-07-01T04:07:46.000Z">
+width height
+s">
+<meta property="og:updated_time" content="2016-07-02T03:27:09.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="HTMLHTML Attributessyntax:
-&amp;lt;p name=&amp;quot;value&amp;quot; &amp;gt; text &amp;lt;/p&amp;gt;
-
+<meta name="twitter:description" content="HTMLHTML Attributessyntax:&amp;lt;p name=&amp;quot;value&amp;quot; &amp;gt; text &amp;lt;/p&amp;gt;
 
 
 
@@ -86,7 +82,8 @@ href
 address information for links
 
 
-width height">
+width height
+s">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -124,9 +121,9 @@ width height">
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -147,9 +144,7 @@ width height">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h1><h3 id="HTML-Attributes"><a href="#HTML-Attributes" class="headerlink" title="HTML Attributes"></a>HTML Attributes</h3><h6 id="syntax"><a href="#syntax" class="headerlink" title="syntax:"></a>syntax:</h6><blockquote>
-<p><strong><code>&lt;p name=&quot;value&quot; &gt; text &lt;/p&gt;</code></strong></p>
-</blockquote>
+        <h1 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h1><h3 id="HTML-Attributes"><a href="#HTML-Attributes" class="headerlink" title="HTML Attributes"></a>HTML Attributes</h3><h6 id="syntax"><a href="#syntax" class="headerlink" title="syntax:"></a>syntax:</h6><p><code>&lt;p name=&quot;value&quot; &gt; text &lt;/p&gt;</code></p>
 <table>
 <thead>
 <tr>
@@ -234,9 +229,7 @@ width height">
 <p>The browser will remove extra spaces and extra lines when the page is displayed.</p>
 <p>Any number of spaces, and any number of new lines, count as only one space.</p>
 </blockquote>
-<h3 id="HTML-styles"><a href="#HTML-styles" class="headerlink" title="HTML styles"></a>HTML styles</h3><h6 id="syntax-1"><a href="#syntax-1" class="headerlink" title="syntax:"></a>syntax:</h6><blockquote>
-<p><code>&lt;p/h1/body style=&quot;property:value;&quot;&gt;</code></p>
-</blockquote>
+<h3 id="HTML-styles"><a href="#HTML-styles" class="headerlink" title="HTML styles"></a>HTML styles</h3><h6 id="syntax-1"><a href="#syntax-1" class="headerlink" title="syntax:"></a>syntax:</h6><p><code>&lt;p/h1/body style=&quot;property:value;&quot;&gt;</code></p>
 <p>Chapter Summary:<br>Use the style attribute for styling HTML elements  </p>
 <table>
 <thead>
@@ -474,11 +467,40 @@ width height">
 <li>Use the <strong>rowspan</strong> attribute to make a cell span many rows</li>
 <li>Use the <strong>id</strong> attribute to uniquely define one table (同css的引用型)  </li>
 </ul>
+<h3 id="HTML-Lists"><a href="#HTML-Lists" class="headerlink" title="HTML Lists"></a>HTML Lists</h3><ol>
+<li><p><code>&lt;ul&gt;</code> : 无序列表</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">  &lt;ul style=&quot;list-style-type:disc&quot;&gt;</span><br><span class="line">  &lt;li&gt;Coffee&lt;/li&gt;</span><br><span class="line">  &lt;/ul&gt; ```  </span><br><span class="line">  - list-style-type:disc : be marked with bullets (default)</span><br><span class="line">  - list-style-type:circle : be marked with circles</span><br><span class="line">  - list-style-type:square	: be marked with squares</span><br><span class="line">  - list-style-type:none	: not be marked</span><br><span class="line">2. `&lt;ol&gt;` :有序列表</span><br></pre></td></tr></table></figure>
+<p><ol type="1"><br><li>Coffee</li><br></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">  - type=&quot;1&quot;	： be numbered with numbers (default)</span><br><span class="line">  - type=&quot;A&quot;	： be numbered with uppercase letters</span><br><span class="line">  - type=&quot;a&quot;	： be numbered with lowercase letters</span><br><span class="line">  - type=&quot;I&quot;	： be numbered with uppercase roman numbers</span><br><span class="line">  - type=&quot;i&quot;	： be numbered with lowercase roman numbers</span><br><span class="line">3. `&lt;dl&gt;` : Description Lists</span><br></pre></td></tr></table></figure></p>
+<p><dl><br><dt>Coffee</dt><br><dd>black hot drink</dd><br></dl>```</p>
+</li>
+<li>horizontal Lists : 单行列表. use <strong>id</strong> 来引用css <code>{display:inline}</code></li>
+<li>Nested HTML lists</li>
+</ol>
+<h3 id="HTML-Block-and-Inline-Elements"><a href="#HTML-Block-and-Inline-Elements" class="headerlink" title="HTML Block and Inline  Elements"></a>HTML Block and Inline  Elements</h3><ol>
+<li>Block-level Elements  <ul>
+<li><code>&lt;div&gt;</code> : used as a container for other HTML elements</li>
+<li><code>&lt;h1&gt; - &lt;h6&gt;</code></li>
+<li><code>&lt;p&gt;</code></li>
+<li><code>&lt;form&gt;</code></li>
+</ul>
+</li>
+<li>Inline Elements  <ul>
+<li><code>&lt;span&gt;</code> : used as a container for some text.  </li>
+<li><code>&lt;a&gt;</code></li>
+<li><code>&lt;img&gt;</code></li>
+<li><code>&lt;iframe&gt;</code> : display a web page within a web page  <ul>
+<li><code>&lt;iframe src=&quot;URL&quot;&gt;&lt;/iframe&gt;</code>  </li>
+<li>use <strong><code>width</code>/<code>height</code>/<code>style=&quot;border:none/5px&quot;</code></strong> to specify</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/06/25/html笔记/" data-id="ciq4d7xv40003ft5uos2xio4k" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/06/25/html笔记/" data-id="ciq4lyrtw0002fq5uv5r5q01p" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -488,7 +510,7 @@ width height">
 <nav id="article-nav">
   
     <a href="/2016/06/26/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Nieuwer</strong>
+      <strong class="article-nav-caption">Récent</strong>
       <div class="article-nav-title">
         
           Hello World
@@ -516,7 +538,7 @@ width height">
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archieven</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li></ul>
     </div>
@@ -526,7 +548,7 @@ width height">
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recente berichten</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
@@ -555,7 +577,7 @@ width height">
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2016 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
