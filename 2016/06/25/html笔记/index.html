@@ -57,7 +57,7 @@ address information for links
 
 width height
 s">
-<meta property="og:updated_time" content="2016-07-02T03:27:09.000Z">
+<meta property="og:updated_time" content="2016-07-02T08:44:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
 <meta name="twitter:description" content="HTMLHTML Attributessyntax:&amp;lt;p name=&amp;quot;value&amp;quot; &amp;gt; text &amp;lt;/p&amp;gt;
@@ -121,9 +121,9 @@ s">
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -409,17 +409,22 @@ s">
 <li>16进制，每两位分别与红、绿、蓝对应，区间0-255</li>
 </ol>
 <h3 id="HTML-Styles-CSS"><a href="#HTML-Styles-CSS" class="headerlink" title="HTML Styles - CSS"></a>HTML Styles - CSS</h3><ol>
-<li>inline : <code>&lt;h1 style=&quot;color:blue;&quot;&gt; text &lt;/h1&gt;</code>  </li>
-<li>初始规范型 : 在<code>&lt;head&gt;</code>里.<ul>
-<li><code>&lt;style&gt;</code>element : 名称 {属性:值;}  相当于定义函数：名称＋{} ；名称可以是body p h1 ，属性包括：color background-color font-family font-size border padding margin 等。The CSS Box Model 如下：<br>p { border: 1px solid black;<br>padding: 10px;<br>margin: 30px; }     </li>
-<li>link : 链接外部css文件，放在<code>&lt;head&gt;</code>里，但不用<code>&lt;style&gt;</code>。<code>&lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt;</code>  </li>
+<li>inline :<br><code>&lt;h1 style=&quot;color:blue;&quot;&gt; text &lt;/h1&gt;</code>  </li>
+<li><p>初始规范型 :<br>在<code>&lt;head&gt;</code>里.</p>
+<ul>
+<li><p><code>&lt;style&gt;</code>element : 名称 {属性:值;}  相当于定义函数：名称＋{} ；名称可以是body p h1 ，属性包括：color background-color font-family font-size border padding margin 等。The CSS Box Model 如下：  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p &#123; border: 1px solid black;  </span><br><span class="line">padding: 10px;  </span><br><span class="line">margin: 30px; &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>link : 链接外部css文件，在<code>&lt;head&gt;</code>里:<code>&lt;link rel=&quot;stylesheet&quot;;type=&quot;text/css&quot;; href=&quot;styles.css&quot;&gt;</code>  </p>
+</li>
 </ul>
 </li>
-<li>引用型：在<code>&lt;head&gt;</code>里 <code>&lt;style&gt;</code>下定义id和class.<ul>
+<li>引用型：<br>在<code>&lt;head&gt;</code>里 <code>&lt;style&gt;</code>下定义id和class.<ul>
 <li>id : #p01 {color:blue;} body里用id=”p01”来引用。</li>
 <li>class : p.error {} body里用class=”error”来引用。</li>
 </ul>
 </li>
+<li>priority:<br>inline – internal/external style sheets – default</li>
 </ol>
 <h3 id="HTML-links"><a href="#HTML-links" class="headerlink" title="HTML links"></a>HTML links</h3><h5 id="syntax-5"><a href="#syntax-5" class="headerlink" title="syntax:"></a>syntax:</h5><p><code>&lt;a href=&quot;url&quot;&gt;link text&lt;/a&gt;</code>  </p>
 <h5 id="links-方式"><a href="#links-方式" class="headerlink" title="links 方式:"></a>links 方式:</h5><ol>
@@ -500,7 +505,7 @@ s">
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/06/25/html笔记/" data-id="ciq4lyrtw0002fq5uv5r5q01p" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/06/25/html笔记/" data-id="ciq61jzkr0003v35u7jkczpe0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -510,7 +515,7 @@ s">
 <nav id="article-nav">
   
     <a href="/2016/06/26/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Récent</strong>
+      <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
           Hello World
@@ -540,7 +545,7 @@ s">
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li></ul>
     </div>
   </div>
 
@@ -548,9 +553,13 @@ s">
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/07/02/css-note/">(no title)</a>
+          </li>
         
           <li>
             <a href="/2016/06/26/first/">(no title)</a>
@@ -577,7 +586,7 @@ s">
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2016 John Doe<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
