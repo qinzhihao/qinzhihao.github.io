@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="/*
+ * NOTE:
+ * - The use of browser-specific styles (-moz-, -webkit-) should be avoided.
+ *   If used, they may not render correctly for people reading the email in
+ *   a different browser than the o">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2016/07/24/weichat-stylesheets/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="/*
+ * NOTE:
+ * - The use of browser-specific styles (-moz-, -webkit-) should be avoided.
+ *   If used, they may not render correctly for people reading the email in
+ *   a different browser than the o">
+<meta property="og:updated_time" content="2016-07-24T02:36:29.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="/*
+ * NOTE:
+ * - The use of browser-specific styles (-moz-, -webkit-) should be avoided.
+ *   If used, they may not render correctly for people reading the email in
+ *   a different browser than the o">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-weichat-stylesheets" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/24/weichat-stylesheets/" class="article-date">
+  <time datetime="2016-07-24T02:32:13.000Z" itemprop="datePublished">2016-07-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        /*
+ * NOTE:
+ * - The use of browser-specific styles (-moz-, -webkit-) should be avoided.
+ *   If used, they may not render correctly for people reading the email in
+ *   a different browser than the one from which the email was sent.
+ * - The use of state-dependent styles (like a:hover) don't work because they
+ *   don't match at the time the styles are made explicit. (In email, styles
+ *   must be explicitly applied to all elements -- stylesheets get stripped.)
+ */
+
+/* This is the overall wrapper, it should be treated as the `body` section. */
+.markdown-here-wrapper {
+}
+
+/* To add site specific rules, you can use the `data-md-url` attribute that we
+   add to the wrapper element. Note that rules like this are used depending
+   on the URL you're *sending* from, not the URL where the recipient views it.
+*/
+/* .markdown-here-wrapper[data-md-url*="mail.yahoo."] ul { color: red; } */
+
+pre, code {
+  font-size: 0.85em;
+  font-family: Consolas, Inconsolata, Courier, monospace;
+}
+
+code {
+  margin: 0 0.15em;
+  padding: 0 0.3em;
+  white-space: pre-wrap;
+  border: 1px solid #EAEAEA;
+  background-color: #F8F8F8;
+  border-radius: 3px;
+  display: inline; /* added to fix Yahoo block display of inline code */
+}
+
+pre {
+  font-size: 1em;
+  line-height: 1.2em;
+}
+
+pre code {
+  white-space: pre;
+  overflow: auto; /* fixes issue #70: Firefox/Thunderbird: Code blocks with horizontal scroll would have bad background colour */
+  border-radius: 3px;
+  border: 1px solid #CCC;
+  padding: 0.5em 0.7em;
+  display: block !important; /* added to counteract the Yahoo-specific `code` rule; without this, code blocks in Blogger are broken */
+}
+
+/* In edit mode, Wordpress uses a `* { font: ...;} rule+style that makes highlighted
+code look non-monospace. This rule will override it. */
+.markdown-here-wrapper[data-md-url*="wordpress."] code span {
+  font: inherit;
+}
+
+/* Wordpress adds a grey background to `pre` elements that doesn't go well with
+our syntax highlighting. */
+.markdown-here-wrapper[data-md-url*="wordpress."] pre {
+  background-color: transparent;
+}
+
+/* This spacing has been tweaked to closely match Gmail+Chrome "paragraph" (two line breaks) spacing.
+Note that we only use a top margin and not a bottom margin -- this prevents the
+"blank line" look at the top of the email (issue #243).
+*/
+p {
+  /* !important is needed here because Hotmail/Outlook.com uses !important to
+     kill the margin in <p>. We need this to win. */
+  margin: 0 0 1.2em 0 !important;
+}
+
+table, pre, dl, blockquote, q, ul, ol {
+  margin: 1.2em 0;
+}
+
+ul, ol {
+  padding-left: 2em;
+}
+
+li {
+  margin: 0.5em 0;
+}
+
+/* Space paragraphs in a list the same as the list itself. */
+li p {
+  /* Needs !important to override rule above. */
+  margin: 0.5em 0 !important;
+}
+
+/* Smaller spacing for sub-lists */
+ul ul, ul ol, ol ul, ol ol {
+  margin: 0;
+  padding-left: 1em;
+}
+
+/* Use Roman numerals for sub-ordered-lists. (Like Github.) */
+ol ol, ul ol {
+  list-style-type: lower-roman;
+}
+
+/* Use letters for sub-sub-ordered lists. (Like Github.) */
+ul ul ol, ul ol ol, ol ul ol, ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 1em;
+  font-weight: bold;
+  font-style: italic;
+}
+
+dl dd {
+  margin: 0 0 1em;
+  padding: 0 1em;
+}
+
+blockquote, q {
+  border-left: 2px solid #009688;
+  padding: 0 10px;
+  color: #777;
+  quotes: none;
+  margin-left: 1em;
+}
+
+blockquote::before, blockquote::after, q::before, q::after {
+  content: none;
+}
+
+strong, b{
+  color: #BF360C;
+}
+
+em, i {
+  color: #009688;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 1.3em 0 1em;
+  padding: 0;
+  text-align: center !important;
+  color: #558B2F !important;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 20px !important;
+  border-bottom: 1px solid #ddd;
+}
+
+h2 {
+  font-size: 18px !important;
+  border-bottom: 1px solid #eee;
+}
+
+h3 {
+  font-size: 16px !important;
+}
+
+h4 {
+  font-size: 16px !important;
+}
+
+h5 {
+  font-size: 1em;
+}
+
+h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+table {
+  padding: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 1em;
+  font: inherit;
+  border: 0;
+}
+
+tbody {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+table tr {
+  border: 0;
+  border-top: 1px solid #CCC;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+table tr:nth-child(2n) {
+  background-color: #F8F8F8;
+}
+
+table tr th, table tr td {
+  font-size: 1em;
+  border: 1px solid #CCC;
+  margin: 0;
+  padding: 0.5em 1em;
+}
+
+table tr th {
+ font-weight: bold;
+  background-color: #F0F0F0;
+}
+</p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/07/24/weichat-stylesheets/" data-id="ciqzztvs40002kx5ugllironj" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/06/26/first/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/07/24/weichat-stylesheets/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/26/first/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/26/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/25/html_note/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
