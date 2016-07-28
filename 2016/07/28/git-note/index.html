@@ -5,16 +5,25 @@
   
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="second file to git">
-<meta property="og:type" content="website">
+  <meta name="description" content="##
+创建版本库(repository)mkdir learngit 建目录cd learngitgit init  将该目录变成git可以管理的目录  
+在learngit目录下新建个文件readme.txt,在里面写点东西  
+git add readme.txt  添加到 缓存区git commit -m &amp;quot;information&amp;quot;  提交给 分支git status 查">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/second.html">
+<meta property="og:url" content="http://yoursite.com/2016/07/28/git-note/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="second file to git">
-<meta property="og:updated_time" content="2016-06-26T12:45:58.000Z">
+<meta property="og:description" content="##
+创建版本库(repository)mkdir learngit 建目录cd learngitgit init  将该目录变成git可以管理的目录  
+在learngit目录下新建个文件readme.txt,在里面写点东西  
+git add readme.txt  添加到 缓存区git commit -m &amp;quot;information&amp;quot;  提交给 分支git status 查">
+<meta property="og:updated_time" content="2016-07-28T09:03:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="second file to git">
+<meta name="twitter:description" content="##
+创建版本库(repository)mkdir learngit 建目录cd learngitgit init  将该目录变成git可以管理的目录  
+在learngit目录下新建个文件readme.txt,在里面写点东西  
+git add readme.txt  添加到 缓存区git commit -m &amp;quot;information&amp;quot;  提交给 分支git status 查">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -63,10 +72,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-git-note" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/second.html" class="article-date">
-  <time datetime="2016-06-26T12:45:58.000Z" itemprop="datePublished">2016-06-26</time>
+    <a href="/2016/07/28/git-note/" class="article-date">
+  <time datetime="2016-07-28T08:06:56.000Z" itemprop="datePublished">2016-07-28</time>
 </a>
     
   </div>
@@ -75,17 +84,36 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="second-file-to-git"><a href="#second-file-to-git" class="headerlink" title="second file to git"></a>second file to git</h1>
+        <p>##</p>
+<h3 id="创建版本库-repository"><a href="#创建版本库-repository" class="headerlink" title="创建版本库(repository)"></a>创建版本库(repository)</h3><p><code>mkdir learngit</code> 建目录<br><code>cd learngit</code><br><code>git init</code>  将该目录变成git可以管理的目录  </p>
+<p>在learngit目录下新建个文件readme.txt,在里面写点东西  </p>
+<p><code>git add readme.txt</code>  添加到 <strong>缓存区</strong><br><code>git commit -m &quot;information&quot;</code>  提交给 <strong>分支</strong><br><code>git status</code> 查看仓库状态<br><code>git diff readme.txt</code> 查看修改内容  </p>
+<h3 id="时光穿梭"><a href="#时光穿梭" class="headerlink" title="时光穿梭"></a>时光穿梭</h3><p><code>git log</code> 查看 <strong>提交</strong> 记录<br><code>git reflog</code> 查看 <strong>命令</strong> 历史记录  </p>
+<p><code>git reset --hard head^</code> 退回 <strong>上次</strong> 提交的版本<br><code>git reset --hard 342346264</code> 退回 <strong>指定</strong> 版本   </p>
+<h5 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h5><p><code>git checkout -- readme.txt</code> 撤销 <strong>工作区</strong> 的修改<br><code>git reset HEAD readme.txt</code> 撤销 <strong>缓存区</strong> 的修改<br><code>git reset --hard HEAD^</code> <strong>版本回退</strong>  </p>
+<p><code>git rm test.txt</code> 删除文件 <strong>（工作区）</strong><br><code>git checkout -- test.txt</code> 恢复删除的文件  </p>
+<h3 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h3><p><code>ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</code> 创建 SSH Key<br>Github 进入 “SSH Key” 页面，点“add ssh key” ,填title，将 <code>id_rsa.pub</code> 的内容粘贴到 <strong>key</strong> 文本框里。    </p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/second.html" data-id="cir63f5we00010l5uc8mowyss" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/07/28/git-note/" data-id="cir63f5xb00020l5umlycr003" class="article-share-link">Delen</a>
       
       
     </footer>
   </div>
   
     
+<nav id="article-nav">
+  
+  
+    <a href="/2016/07/24/weichat-stylesheets/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ouder</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
   
 </article>
 
