@@ -64,32 +64,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-css-notes" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/07/30/css-notes/" class="article-date">
-  <time datetime="2016-07-30T15:09:48.000Z" itemprop="datePublished">2016-07-30</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/30/css-notes/" data-id="cir9bent10001ox5u4haz2914" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-git-note" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/07/28/git-note/" class="article-date">
@@ -110,12 +84,36 @@
 <p><code>$ git reset --hard head^</code> 退回 <strong>上次</strong> 提交的版本<br><code>$ git reset --hard 342346264</code> 退回 <strong>指定</strong> 版本   </p>
 <h5 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h5><p><code>$ git checkout -- readme.txt</code> 撤销 <strong>工作区</strong> 的修改<br><code>$ git reset HEAD readme.txt</code> 撤销 <strong>缓存区</strong> 的修改<br><code>$ git reset --hard HEAD^</code> <strong>版本回退</strong>  </p>
 <p><code>$ git rm test.txt</code> 删除文件 <strong>（工作区）</strong><br><code>$ git checkout -- test.txt</code> 恢复删除的文件  </p>
-<h3 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h3><p><code>$ ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</code> 创建 SSH Key<br>Github 进入 “SSH Key” 页面，点“add ssh key” ,填title，将 <code>id_rsa.pub</code> 的内容粘贴到 <strong>key</strong> 文本框里。<br><code>$ git remote add origin git@github.com:yourname/learngit.git</code> 在本地目录下关联远程库<br><code>$ git push -u origin master</code> 第一次推送要加 “-u”<br><code>$ git push origin master</code><br><strong>注</strong>： 第一次使用git的 <code>clone</code> 或 <code>push</code> 命令连接Github，会有个警告，输入 <code>yes</code> 即可。    </p>
+<h3 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h3><p><code>$ ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</code> 创建 SSH Key<br>Github 进入 “SSH Key” 页面，点“add ssh key” ,填title，将 <code>id_rsa.pub</code> 的内容粘贴到 <strong>key</strong> 文本框里。<br><code>$ git remote add origin git@github.com:yourname/learngit.git</code> 在本地目录下关联远程库<br><code>$ git push -u origin master</code> 第一次推送要加 “-u”<br><code>$ git push origin master</code><br><strong>注</strong>： 第一次使用git的 <code>clone</code> 或 <code>push</code> 命令连接Github，会有个警告，输入 <code>yes</code> 即可。      </p>
+<p><strong>最好的方式</strong> 是：从远程库 <code>clone</code> .   </p>
+<ol>
+<li>在Github上新建个仓库  </li>
+<li><code>$ git clone git@github.com:michaelliao/仓库名.git</code> 克隆到本地   </li>
+</ol>
+<p><strong>注：</strong> Github 给出的地址不止一个，还可以用 <code>https://github.com/qinzhihao/clone-test.git</code> , 默认的 <code>git://</code> 使用ssh，速度快；而 <code>https</code> 协议慢，有些公司不支持ssh协议，只能用 <code>https</code>。  </p>
+<h3 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h3><p><strong>分支提交前，要先将上级分支合并到该分支，确保是针对主分支的最新版本库进行的提交</strong></p>
+<h5 id="创建与合并分支"><a href="#创建与合并分支" class="headerlink" title="创建与合并分支"></a>创建与合并分支</h5><p><code>$ git checkout -b dev</code>  创建并切换到dev分支  相当于两条命令： <code>git branch dev / git checkout dev</code><br><code>$ git branch</code>  查看分支情况<br><code>$ git checkout 分支名</code>  切换到分支<br><code>$ git checkout master</code>  切换回 <code>master</code> 主分支<br><code>$ git merge dev</code>  把dev分支的工作成果合并到 master 分支上。<br><code>$ git branch -d dev</code>  删除dev分支   </p>
+<h5 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h5><p><strong>注：</strong> 分支和分支的分支都修改后，合并时会出现冲突，需要手动修改，然后提交。<br><code>$ git log --graph</code> 查看分支合并图  </p>
+<h5 id="分支管理策略"><a href="#分支管理策略" class="headerlink" title="分支管理策略"></a>分支管理策略</h5><ol>
+<li>下级分支必须依托最新版本的上级分支，即：每一个最新的版本库文件。  </li>
+<li><code>Fast forward</code> 模式，将主分支的指针直接指向次级分支的版本，不保留合并历史。    </li>
+<li>普通模式： <code>git maege --no-ff -m &quot;&quot; dev</code>,保留合并历史。  </li>
+</ol>
+<h5 id="储藏现场"><a href="#储藏现场" class="headerlink" title="储藏现场"></a>储藏现场</h5><p><strong>注：</strong> <strong>每次提交都是一个新的版本，所以，如果工作没完成不要提交，否则会给其他人造成困扰，因为，他们要提交时，必须先合并你提交后的主分支版本，而，你的是未完成的工作，别人怎么能搞懂。</strong>  </p>
+<p>所以，如果某个分支上的任务未完成时，需要去其他分支工作，那么就需要先储藏当前分支的工作。  </p>
+<p><code>$ git stash</code><br><code>$ git stash list</code><br><code>$ git stash pop</code>  恢复并删除储藏的内容<br><code>$ git stash apply</code>  恢复但不删除stash内容   </p>
+<h5 id="Feature-分支"><a href="#Feature-分支" class="headerlink" title="Feature 分支"></a>Feature 分支</h5><p><strong>注：</strong> 新建分支Feature，不与主分支合并，直接取消、删除。此时需切回主分支删除Feature分支。<br><code>$ git branch -d Feature</code>  删除失败，提示未合并<br><code>$ git branch -D Feature</code>  强行删除。  </p>
+<h5 id="多人协作"><a href="#多人协作" class="headerlink" title="多人协作"></a>多人协作</h5><p><code>$ git remote</code> 产看远程库信息  <code>$ git remote -v</code> 查看远程库详细信息   </p>
+<p><strong>推送分支</strong>：<br><code>$ git push origin master</code> 推送主分支（用于版本发布）<br><code>$ git push origin dev</code>  推送开发分支（团队在这工作）</p>
+<p><strong>删除远程分支</strong>：<br><code>$ git push origin :dev</code> 删除远程分支dev  </p>
+<p><strong>抓取分支</strong>：<br><code>$ git clone git@github.com:use-name/learngit.git</code> 克隆远程库，默认只有master分支<br><code>$ git checkout -b dev origin/dev</code> 创建远程 <code>dev</code> 分支到本地<br><code>$ git branch --set-upstream-to=origin/dev dev</code> 指定本地dev分支和远程dev分支的链接<br><code>$ git pull</code> 抓取远程新的提交，如有冲突，像合并分支一样处理。<br><code>$ git ls-remote --heads origin</code> 查看远程分支情况   </p>
+<h3 id="标签管理"><a href="#标签管理" class="headerlink" title="标签管理"></a>标签管理</h3><h5 id="创建标签"><a href="#创建标签" class="headerlink" title="创建标签"></a>创建标签</h5><p><code>$ git tag v1.0</code> 创建一个新标签<br><code>$ git tag</code>  查看所有标签<br><code>$ git tag v0.8 版本id</code> 指定某版本的标签<br><code>$ git show 标签名</code> 查看标签信息<br><code>$ git tag -a v0.4 -m &quot;说明文字&quot; 版本ID</code> 创建带有说明的标签<br><code>$ git tag -s v0.4 -m &quot;说明文字&quot; 版本ID</code> 创建带有私钥签名的标签    </p>
+<h5 id="操作标签"><a href="#操作标签" class="headerlink" title="操作标签"></a>操作标签</h5><p><code>$ git tag -d v0.4</code> 删除标签<br><code>$ git push origin v0.4</code> 推送某个标签到远程<br><code>$ git push origin --tags</code> 推送全部标签到远程<br>删除远程标签：<br><code>$ git tag -d v0.4</code> 先删除本地标签<br><code>$ git push origin :refs/tags/v0.4</code>  从远程删除  </p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/28/git-note/" data-id="cir9benty0005ox5u8dlrzml0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/28/git-note/" data-id="cirbs1qzt0002pi5u66dtt7mv" class="article-share-link">Share</a>
       
       
     </footer>
@@ -354,7 +352,7 @@ table tr th {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/24/weichat-stylesheets/" data-id="cir9benur0007ox5udn43hfwn" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/24/weichat-stylesheets/" data-id="cirbs1r0j0004pi5uhlkobcoq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -380,7 +378,7 @@ table tr th {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/06/26/first/" data-id="cir9bentt0003ox5umursgs6z" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/06/26/first/" data-id="cirbs1r0f0003pi5u5wnljmmp" class="article-share-link">Share</a>
       
       
     </footer>
@@ -426,7 +424,7 @@ table tr th {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/06/26/hello-world/" data-id="cir9bentv0004ox5uimwqpngj" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/06/26/hello-world/" data-id="cirbs1r0z0005pi5uoio9m27d" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1010,7 +1008,7 @@ table tr th {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/06/25/html_note/" data-id="cir9benum0006ox5u9dboxb7b" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/06/25/html_note/" data-id="cirbs1r120006pi5u4b5ggbjr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1050,10 +1048,6 @@ table tr th {
       <ul>
         
           <li>
-            <a href="/2016/07/30/css-notes/">(no title)</a>
-          </li>
-        
-          <li>
             <a href="/2016/07/28/git-note/">(no title)</a>
           </li>
         
@@ -1067,6 +1061,10 @@ table tr th {
         
           <li>
             <a href="/2016/06/26/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/25/html_note/">(no title)</a>
           </li>
         
       </ul>
