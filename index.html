@@ -53,7 +53,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -598,8 +598,8 @@
 }
 </style>
 
-<p><div class="tooltip">Hover over me<br>  <span class="tooltiptext">Tooltip text</span><br></div><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#### Positioning Tooltips  </span><br><span class="line">1. Right/Left/Top/Bottom Tooltips  </span><br><span class="line">2. Tooltips Arrows  </span><br><span class="line">3. Fade In Tooltips (Animation)  : `opacity: 0 ` `transition: opacity 3s`</span><br><span class="line"></span><br><span class="line">## css Image Gallery  </span><br><span class="line">`float: left ` 就是float排列下而已。跟 **Navigation Bar** 类似，把 `lists` `float` 后排列一样。   </span><br><span class="line">**注：** 今天弄明白一个问题， **类** 指的是一个整体，比如： `.img` 定义的是使用这个类的element的整体的特性（所有子element组成的整体）。若不用 `类`而是直接用 `element`，那么，所有 **元素** 都将具有这个特性，包括 **子元素**，这样会显得很凌乱。  </span><br><span class="line"></span><br><span class="line">## css Image Sprites  </span><br><span class="line">**注：** 将几个图片组合成1个图片，然后通过选择显示不同的区域来使用它，这样可以提升加载效率。  </span><br><span class="line">通常将该图片作为背景，定义在css里。 如：</span><br></pre></td></tr></table></figure></p>
-<p>#home {<br>    width: 46px;<br>    height: 44px;<br>    background: url(img_navsprites.gif) 0 0;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">**备注：** 至于如何 **display** ，可以像Gallery一样 **float到left** ，也可以用 **css组合** ， 组合后用 **position：relative** 和 **position：absolute**  .   </span><br><span class="line"></span><br><span class="line">### css Attr Selectors  </span><br><span class="line">**注：** 选择 `elements` 的 `attribute` ，并设置。   </span><br><span class="line"></span><br><span class="line">Selector|description</span><br><span class="line">---|---</span><br><span class="line">`[attribute]`|所有 **含有该属性** 的，如： `[target]`</span><br><span class="line">`[attribute=&quot;value&quot;]`|属性 **等于某个值** 的，如： `[target=&quot;_blank&quot;]`</span><br><span class="line">`[XXX~=&quot;value&quot;]`|值 **包含单独的** 单词的，如： `[XXX~=&quot;flower&quot;]`</span><br><span class="line">`[attribute｜=&quot;value&quot;]`|属性值以 **某个单词开头** 的，如： `class｜=&quot;top&quot;` 可以为top-  </span><br><span class="line">`[attribute^=&quot;value&quot;]`|以 **某些字符开头** 的， **可以不是完整的单词** ，如： `[class^=&quot;tha&quot;]` 等   </span><br><span class="line">`[attribute$=&quot;value&quot;]`|以 **某些字符结尾** 的， **可以不是单词** ，如： `[class$=&quot;est&quot;]`  </span><br><span class="line">`[attribute＊=&quot;value&quot;]`|包含 **某些字符** 的， **可以不是单词** ，如： `[class*=&quot;te&quot;]`  </span><br><span class="line">##### 两种形式：  </span><br><span class="line">1. select **with class**  : 用类、ID选择。见上  </span><br><span class="line">2. select **with attribute** : 是属性时，用属性选择。见上  </span><br><span class="line"></span><br><span class="line">### css Forms  </span><br><span class="line">用 `input [type=text]` 来选择</span><br><span class="line"></span><br><span class="line">style|Property</span><br><span class="line">---|---</span><br><span class="line">`input`|width/padding/margin/box-sizing/border/color/background-color/background-image    </span><br><span class="line">`input[type=text]:focus`| **outline: none**  </span><br><span class="line">`textarea`|</span><br><span class="line">`select`|</span><br><span class="line">**input button** | `input[type=button], input[type=submit], input[type=reset]`   </span><br><span class="line"></span><br><span class="line">### css Counters</span><br></pre></td></tr></table></figure></p>
+<p><div class="tooltip">Hover over me<br>  <span class="tooltiptext">Tooltip text</span><br></div><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### Positioning Tooltips  </span><br><span class="line">1. Right/Left/Top/Bottom Tooltips  </span><br><span class="line">2. Tooltips Arrows  </span><br><span class="line">3. Fade In Tooltips (Animation)  : `opacity: 0 ` `transition: opacity 3s`</span><br><span class="line"></span><br><span class="line">## css Image Gallery  </span><br><span class="line">`float: left ` 就是float排列下而已。跟 **Navigation Bar** 类似，把 `lists` `float` 后排列一样。   </span><br><span class="line">**注：** 今天弄明白一个问题， **类** 指的是一个整体，比如： `.img` 定义的是使用这个类的element的整体的特性（所有子element组成的整体）。若不用 `类`而是直接用 `element`，那么，所有 **元素** 都将具有这个特性，包括 **子元素**，这样会显得很凌乱。  </span><br><span class="line"></span><br><span class="line">## css Image Sprites  </span><br><span class="line">**注：** 将几个图片组合成1个图片，然后通过选择显示不同的区域来使用它，这样可以提升加载效率。  </span><br><span class="line">通常将该图片作为背景，定义在css里。 如：</span><br></pre></td></tr></table></figure></p>
+<p>#home {<br>    width: 46px;<br>    height: 44px;<br>    background: url(img_navsprites.gif) 0 0;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">**备注：** 至于如何 **display** ，可以像Gallery一样 **float到left** ，也可以用 **css组合** ， 组合后用 **position：relative** 和 **position：absolute**  .   </span><br><span class="line"></span><br><span class="line">### css Attr Selectors  </span><br><span class="line"></span><br><span class="line">**注：** 选择 `elements` 的 `attribute` ，并设置。   </span><br><span class="line"></span><br><span class="line">Selector|description</span><br><span class="line">---|---</span><br><span class="line">`[attribute]`|所有 **含有该属性** 的，如： `[target]`</span><br><span class="line">`[attribute=&quot;value&quot;]`|属性 **等于某个值** 的，如： `[target=&quot;_blank&quot;]`</span><br><span class="line">`[XXX~=&quot;value&quot;]`|值 **包含单独的** 单词的，如： `[XXX~=&quot;flower&quot;]`</span><br><span class="line">`[attribute｜=&quot;value&quot;]`|属性值以 **某个单词开头** 的，如： `class｜=&quot;top&quot;` 可以为top-  </span><br><span class="line">`[attribute^=&quot;value&quot;]`|以 **某些字符开头** 的， **可以不是完整的单词** ，如： `[class^=&quot;tha&quot;]` 等   </span><br><span class="line">`[attribute$=&quot;value&quot;]`|以 **某些字符结尾** 的， **可以不是单词** ，如： `[class$=&quot;est&quot;]`  </span><br><span class="line">`[attribute＊=&quot;value&quot;]`|包含 **某些字符** 的， **可以不是单词** ，如： `[class*=&quot;te&quot;]`  </span><br><span class="line">##### 两种形式：  </span><br><span class="line"></span><br><span class="line">1. select **with class**  : 用类、ID选择。见上  </span><br><span class="line">2. select **with attribute** : 是属性时，用属性选择。见上  </span><br><span class="line"></span><br><span class="line">### css Forms  </span><br><span class="line"></span><br><span class="line">用 `input [type=text]` 来选择</span><br><span class="line"></span><br><span class="line">style|Property</span><br><span class="line">---|---</span><br><span class="line">`input`|width/padding/margin/box-sizing/border/color/background-color/background-image    </span><br><span class="line">`input[type=text]:focus`| **outline: none**  </span><br><span class="line">`textarea`|</span><br><span class="line">`select`|</span><br><span class="line">**input button** | `input[type=button], input[type=submit], input[type=reset]`   </span><br><span class="line"></span><br><span class="line">### css Counters</span><br></pre></td></tr></table></figure></p>
 <p>body {<br>    counter-reset: section;<br>}</p>
 <p>h2::before {<br>    counter-increment: section;<br>    content: “Section “ counter(section) “: “;<br>}<br>```  </p>
 <ul>
@@ -615,7 +615,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/30/css-notes/" data-id="circulee20002ez5umy1wvsmh" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/07/30/css-notes/" data-id="circwmrsf0002zj5uu6z72kbr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -674,7 +674,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/28/git-note/" data-id="circuleei0006ez5uyzokorm0" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/07/28/git-note/" data-id="circwmrte0006zj5uxtkxzk27" class="article-share-link">Share</a>
       
       
     </footer>
@@ -913,7 +913,7 @@ table tr th {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/24/weichat-stylesheets/" data-id="circuleec0004ez5uri1jg4pw" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/07/24/weichat-stylesheets/" data-id="circwmrt10003zj5ugztck2d9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -959,7 +959,7 @@ table tr th {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/06/26/hello-world/" data-id="circulee90003ez5u5urf5je8" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/06/26/hello-world/" data-id="circwmrtb0005zj5u293ocryi" class="article-share-link">Share</a>
       
       
     </footer>
@@ -981,7 +981,8 @@ table tr th {
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h1><h3 id="HTML-Attributes"><a href="#HTML-Attributes" class="headerlink" title="HTML Attributes"></a>HTML Attributes</h3><h6 id="syntax"><a href="#syntax" class="headerlink" title="syntax:"></a>syntax:</h6><p><code>&lt;p attribute=&quot;value&quot; &gt; text &lt;/p&gt;</code></p>
+        <hr>
+<h2 id="title-HTML"><a href="#title-HTML" class="headerlink" title="title: HTML   "></a>title: HTML   </h2><h3 id="HTML-Attributes"><a href="#HTML-Attributes" class="headerlink" title="HTML Attributes"></a>HTML Attributes</h3><h6 id="syntax"><a href="#syntax" class="headerlink" title="syntax:"></a>syntax:</h6><p><code>&lt;p attribute=&quot;value&quot; &gt; text &lt;/p&gt;</code></p>
 <table>
 <thead>
 <tr>
@@ -1543,7 +1544,7 @@ table tr th {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/06/25/html_note/" data-id="circuleef0005ez5uznq99y0j" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/06/25/html_note/" data-id="circwmrt40004zj5ukdf2dng2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1568,7 +1569,7 @@ table tr th {
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archieven</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li></ul>
     </div>
@@ -1578,7 +1579,7 @@ table tr th {
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recente berichten</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
