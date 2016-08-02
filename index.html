@@ -53,7 +53,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Søk"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -63,6 +63,558 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-css-notes" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/30/css-notes/" class="article-date">
+  <time datetime="2016-07-30T15:09:48.000Z" itemprop="datePublished">2016-07-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h2 id="CSS-笔记"><a href="#CSS-笔记" class="headerlink" title="CSS 笔记"></a>CSS 笔记</h2><h2 id="CSS-syntax-and-selectors"><a href="#CSS-syntax-and-selectors" class="headerlink" title="CSS syntax and selectors"></a>CSS syntax and selectors</h2><h5 id="CSS-syntax"><a href="#CSS-syntax" class="headerlink" title="CSS syntax"></a>CSS syntax</h5><p><code>p {color: red; text-align: center;}</code>  </p>
+<h5 id="CSS-Selectors"><a href="#CSS-Selectors" class="headerlink" title="CSS Selectors"></a>CSS Selectors</h5><ol>
+<li><strong>element</strong> selector<br><code>p {color: red; text-align: center;}</code>   </li>
+<li><strong>id</strong> selector<br><code>#para1/p#para1 {color: red; text-align: center;}</code>   </li>
+<li><strong>class</strong> selector<br><code>.center/p.center {color: red; text-align: center;}</code><br><strong>HTML elements can also refer to more than one class. But not id</strong>  </li>
+<li><strong>Grouping</strong> selector<br><code>h1, h2, p {text-align: center;color: red;}</code>  </li>
+</ol>
+<h2 id="CSS-How-To-…"><a href="#CSS-How-To-…" class="headerlink" title="CSS How To …"></a>CSS How To …</h2><p>参见 html笔记：html style css  </p>
+<h2 id="CSS-Colors"><a href="#CSS-Colors" class="headerlink" title="CSS Colors"></a>CSS Colors</h2><p>参见 html笔记  </p>
+<h2 id="CSS-Backgrounds"><a href="#CSS-Backgrounds" class="headerlink" title="CSS Backgrounds"></a>CSS Backgrounds</h2><ol>
+<li>background color  </li>
+<li>background image   <ul>
+<li><code>body {background-image: url(&quot;paper.gif&quot;);}</code>  </li>
+<li><strong>repeat</strong>  <ul>
+<li>repeat horizontally or vertically :<br><code>background-repeat:repeat-x/y</code>  </li>
+<li>no repeat : <code>no-repeat</code>  </li>
+</ul>
+</li>
+<li>position  <ul>
+<li>set position : <code>background-position: right/left top</code>   </li>
+<li>fixed position : <code>background-attachment:fixed</code>  </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Shorthand property<br><code>body {background: #ffffff url(&quot;img_tree.png&quot;) no-repeat right top;}</code>  </li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>property</th>
+<th>value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>background</code></td>
+<td>Shorthand property</td>
+</tr>
+<tr>
+<td><code>background-color</code></td>
+<td>color/rgb/hex</td>
+</tr>
+<tr>
+<td><code>background-image</code></td>
+<td>url(“xxx.gif”)</td>
+</tr>
+<tr>
+<td><code>background-repeat</code></td>
+<td>repeat-x/y, no-repeat</td>
+</tr>
+<tr>
+<td><code>background-position</code></td>
+<td>right/left top</td>
+</tr>
+<tr>
+<td><code>background-attachment</code></td>
+<td>fixed  </td>
+</tr>
+</tbody>
+</table>
+<h2 id="CSS-Borders"><a href="#CSS-Borders" class="headerlink" title="CSS Borders"></a>CSS Borders</h2><ol>
+<li><p><strong>Border</strong><br><code>p {border: 5px solid red;}</code>  </p>
+<blockquote>
+<p>style 必须指定，其他可以默认   </p>
+</blockquote>
+</li>
+<li><p><strong>Border-style/color/width/radius</strong><br><code>p {Border-style/...: solid dotted dashed;}</code><br>与每个边的对应关系（2-4value）：<br>上下／右左；上／下／右左；上／右／下／左（顺时针）   </p>
+<ul>
+<li>style: dotted/dashed/solid/double/groove/ridge/inset/outset/none/hidden/  </li>
+</ul>
+</li>
+<li><strong>Border-left/…</strong>  <ul>
+<li>简化时，同<strong>Border</strong>一样,必须指定style。</li>
+<li><strong>Border-left/…-style/…</strong> 这是最具体的指定。  </li>
+</ul>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>property</th>
+<th>value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>border-style/color/width/radius</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>border-top/right/bottom/left-style/color/width</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>border</code></td>
+<td>Shorthand(四条边一样)</td>
+</tr>
+<tr>
+<td><code>border-top/right/bottom/left</code></td>
+<td>Shorthand(每条边单独指定)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="CSS-Margins"><a href="#CSS-Margins" class="headerlink" title="CSS Margins"></a>CSS Margins</h2><ol>
+<li>margin-top/right/bottom/left  </li>
+<li>margin (Shorthand) : 同border，与每个方位的对应关系。  </li>
+<li>几个特性：<ul>
+<li>inherit: <code>margin:inherit;</code>  </li>
+<li>auto value: <code>margin:auto;</code>  </li>
+<li>collapse: 上行bottom与下行top 的margin会collapse，只取最大的那个，不是相加。（左右的不collapse）  </li>
+</ul>
+</li>
+</ol>
+<h2 id="CSS-Padding"><a href="#CSS-Padding" class="headerlink" title="CSS Padding"></a>CSS Padding</h2><ol>
+<li>padding-top/right/bottom/left  </li>
+<li>padding(Shorthand): 对应关系同上。  </li>
+<li>inherit: 同上。（padding没有auto和collapse）  </li>
+</ol>
+<h2 id="CSS-Height-Width"><a href="#CSS-Height-Width" class="headerlink" title="CSS Height/Width"></a>CSS Height/Width</h2><ol>
+<li><strong>height/width</strong>  <ul>
+<li>Note: The height and width properties do not include padding, borders, or margins; they set the height/width of the area inside the padding, border, and margin of the element!  </li>
+</ul>
+</li>
+<li><strong>max-width</strong>(min height)  <ul>
+<li><code>max-width</code>适应浏览器窗口大小；<code>width</code>固定大小。  </li>
+<li>Note: The value of the max-width property overrides width.  </li>
+</ul>
+</li>
+</ol>
+<h2 id="CSS-Box-Model"><a href="#CSS-Box-Model" class="headerlink" title="CSS Box Model"></a>CSS Box Model</h2><ol>
+<li>The CSS Box Model    <ul>
+<li><strong>Content</strong> - The content of the box, where text and images appear</li>
+<li><strong>Padding</strong> - Clears an area around the content. The padding is transparent</li>
+<li><strong>Border</strong> - A border that goes around the padding and content</li>
+<li><strong>Margin</strong> - Clears an area outside the border. The margin is transparent  </li>
+</ul>
+</li>
+<li>Width and Height of an Element   <ul>
+<li><strong>Important</strong>: When you set the width and height properties of an element with CSS, you just set the width and height of the content area. To calculate the full size of an element, you must also add padding, borders and margins.  </li>
+<li>The <strong>total width</strong> : 四样element相加  </li>
+<li>The <strong>total height</strong> : 四样element相加    </li>
+</ul>
+</li>
+</ol>
+<h2 id="css-Outline"><a href="#css-Outline" class="headerlink" title="css Outline"></a>css Outline</h2><p><code>outline是element的轮廓，不会影响element的宽度等（不同于border）。</code>   </p>
+<ol>
+<li>outline-style/color/width: 语法同border  </li>
+<li>outline - shorthand property : 同border</li>
+</ol>
+<h2 id="css-Text"><a href="#css-Text" class="headerlink" title="css Text"></a>css Text</h2><table>
+<thead>
+<tr>
+<th>property</th>
+<th>description    </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>color</code></td>
+<td>sets the color of text</td>
+</tr>
+<tr>
+<td><code>derection</code></td>
+<td><code>direction:rtl</code>:right-to-left,writing direction</td>
+</tr>
+<tr>
+<td><code>letter-spacing</code></td>
+<td>space between characters in a text</td>
+</tr>
+<tr>
+<td><code>line-height</code></td>
+<td>sets the line height  </td>
+</tr>
+<tr>
+<td><code>text-align</code></td>
+<td>对齐方式：left/center/right/justify； <strong>justify</strong> 是报纸或杂志排版，左右对齐。</td>
+</tr>
+<tr>
+<td><code>text-decoration</code></td>
+<td>overline/line-through/underline/none,none移除链接的下划线  </td>
+</tr>
+<tr>
+<td><code>text-indent</code></td>
+<td>首行缩进  </td>
+</tr>
+<tr>
+<td><code>text-transform</code></td>
+<td>uppercase/lowercase/capitalize,大写／小写／首字母大写  </td>
+</tr>
+<tr>
+<td><code>word-spacing</code></td>
+<td>space between words in a text  </td>
+</tr>
+</tbody>
+</table>
+<h2 id="css-Fonts"><a href="#css-Fonts" class="headerlink" title="css Fonts"></a>css Fonts</h2><h5 id="css-Font-Families"><a href="#css-Font-Families" class="headerlink" title="css Font Families"></a>css Font Families</h5><table>
+<thead>
+<tr>
+<th>generic family</th>
+<th>font family</th>
+<th>description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Serif</td>
+<td>Times New Roman/Georgia</td>
+<td>字符带有小尾巴  </td>
+</tr>
+<tr>
+<td>Sans-serif</td>
+<td>Arial/Verdana</td>
+<td>without serif lines  </td>
+</tr>
+<tr>
+<td>Monospace</td>
+<td>Courier New/Lucida Console</td>
+<td>等宽字体  </td>
+</tr>
+</tbody>
+</table>
+<h5 id="css-Font-Properties"><a href="#css-Font-Properties" class="headerlink" title="css Font Properties"></a>css Font Properties</h5><table>
+<thead>
+<tr>
+<th>property</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>font</code></td>
+<td>shorthand  </td>
+</tr>
+<tr>
+<td><code>font-family</code></td>
+<td>more than one word must be in “Times New Roman”</td>
+</tr>
+<tr>
+<td><code>font-style</code></td>
+<td>normal/<strong>italic</strong> /oblique 重点是斜体</td>
+</tr>
+<tr>
+<td><code>font-size</code></td>
+<td>px/em/% , <em>pixels/16=em</em> ; <strong>em</strong> 允许用户改变…大小</td>
+</tr>
+<tr>
+<td><code>font-weight</code></td>
+<td>normal/<strong>bold</strong>  </td>
+</tr>
+<tr>
+<td><code>font-variant</code></td>
+<td>normal/<strong>small-caps</strong> ; small-caps：小写字符变成<strong>缩小版的大写</strong>字符</td>
+</tr>
+</tbody>
+</table>
+<h2 id="css-Links"><a href="#css-Links" class="headerlink" title="css Links"></a>css Links</h2><ol>
+<li>links can be styled with any <strong>css property</strong> (e.g. <strong>color,font-family,text-decoration,text-align</strong>, etc.)  </li>
+<li><strong>four links states</strong> : a:link/a:visited/a:hover/a:active <strong>须按次序</strong>。  </li>
+</ol>
+<h2 id="css-Lists"><a href="#css-Lists" class="headerlink" title="css Lists"></a>css Lists</h2><table>
+<thead>
+<tr>
+<th>property</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>list-style</code></td>
+<td><code>list-style: square inside url(&quot;sqpurple.gif&quot;);</code>  </td>
+</tr>
+<tr>
+<td><code>list-style-image</code></td>
+<td>Specifies an image as the list-item marker</td>
+</tr>
+<tr>
+<td><code>list-style-position</code></td>
+<td><code>inside/outside</code></td>
+</tr>
+<tr>
+<td><code>list-style-type</code></td>
+<td><code>circle/square/decimal/none</code>  </td>
+</tr>
+</tbody>
+</table>
+<h2 id="css-Tables"><a href="#css-Tables" class="headerlink" title="css Tables"></a>css Tables</h2><ol>
+<li><strong>Table Borders</strong> :<ul>
+<li>border: <code>table, th, td {border: 1px solid black;}</code>  </li>
+<li>border-collapse: <code>table {border-collapse: collapse;}</code>  </li>
+<li>border-bottom/top: <code>th, td {border-bottom: 1px solid #ddd;}</code></li>
+</ul>
+</li>
+<li><strong>Horizontal Alignment</strong> : <code>th {text-align: left;}</code>  </li>
+<li><strong>Vertical Alignment</strong> : <code>td {vertical-align: bottom;}</code></li>
+<li><strong>Hoverable Table</strong> : <code>tr:hover {background-color: #f5f5f5}</code></li>
+<li><strong>Striped Tables</strong> : <code>tr:nth-child(even/odd) {background-color:#f2f2f2}</code></li>
+<li><strong>Responsive Table</strong> : <code>&lt;div style=&quot;overflow-x:auto;&quot;&gt;</code>  </li>
+</ol>
+<h1 id="CSS-Layout"><a href="#CSS-Layout" class="headerlink" title="CSS Layout"></a>CSS Layout</h1><h2 id="css-Display"><a href="#css-Display" class="headerlink" title="css Display"></a>css Display</h2><ol>
+<li><strong>default display value</strong><ul>
+<li><strong>block-level elements</strong> : <code>&lt;div&gt; &lt;h1&gt; &lt;p&gt; &lt;header&gt; &lt;form&gt; &lt;footer&gt; &lt;section&gt;</code>  </li>
+<li><strong>inline elements</strong> : <code>&lt;span&gt; &lt;a&gt; &lt;img&gt;</code>  </li>
+</ul>
+</li>
+<li><strong>override the default display value</strong>  <ul>
+<li><code>display:inline</code>  </li>
+<li><code>display:block</code></li>
+</ul>
+</li>
+<li><strong>hide element</strong><ul>
+<li><code>display:none</code> : <strong>not take up</strong> space  </li>
+<li><code>visibility:hidden</code> : <strong>take up</strong> the same space as before    </li>
+</ul>
+</li>
+</ol>
+<h2 id="css-max-width"><a href="#css-max-width" class="headerlink" title="css max-width"></a>css max-width</h2><ol>
+<li><strong>width</strong> : 文本不随窗口大小变化，不方便小屏设备查看  </li>
+<li><strong>max-width</strong> : 文本随窗口大小折叠，方便小屏设备查看  </li>
+</ol>
+<h2 id="css-Position"><a href="#css-Position" class="headerlink" title="css Position"></a>css Position</h2><h5 id="Position-Property"><a href="#Position-Property" class="headerlink" title="Position Property"></a>Position Property</h5><ol>
+<li><code>position:static</code> : 静态的（静止），不因top bottom left等属性而发生位移。</li>
+<li><code>position:relative</code> : relative to its normal position .   </li>
+<li><code>position:fixed</code> : relative to the browser window.   </li>
+<li><code>position:absolute</code> : relative to the HTML page, or relative to the nearest positioned ancestor.   </li>
+</ol>
+<h5 id="Overlapping-Elements"><a href="#Overlapping-Elements" class="headerlink" title="Overlapping Elements"></a>Overlapping Elements</h5><ol>
+<li><code>z-index</code> : 越小（可为负数）越底下  </li>
+<li><strong>default</strong> : 默认 <strong>absolute</strong> 在最上层；后出现的在上层。</li>
+<li>Positioning Text in an image : 用 <strong>position:absolute</strong> relative to the nearest positioned ancestor.</li>
+</ol>
+<h2 id="Overflow"><a href="#Overflow" class="headerlink" title="Overflow"></a>Overflow</h2><table>
+<thead>
+<tr>
+<th>Overflow</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>overflow:visible</code></td>
+<td>溢出、看得见  </td>
+</tr>
+<tr>
+<td><code>overflow:hidden</code></td>
+<td>隐藏、看不见  </td>
+</tr>
+<tr>
+<td><code>overflow:scroll</code></td>
+<td>add a scrollar even if you do not need it  </td>
+</tr>
+<tr>
+<td><code>overflow:auto</code></td>
+<td>only add scrollars when necessary  </td>
+</tr>
+<tr>
+<td><code>overflow-x/y</code></td>
+<td>hidden/scroll/auto  </td>
+</tr>
+</tbody>
+</table>
+<h2 id="float-and-clear"><a href="#float-and-clear" class="headerlink" title="float and clear"></a>float and clear</h2><h5 id="float-and-clear-1"><a href="#float-and-clear-1" class="headerlink" title="float and clear"></a>float and clear</h5><table>
+<thead>
+<tr>
+<th>property</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>float:right/left</code></td>
+<td>Specifies whether or not an element should float</td>
+</tr>
+<tr>
+<td><code>clear:right/left</code></td>
+<td>不允许哪边float  </td>
+</tr>
+<tr>
+<td><code>overflow</code></td>
+<td>溢出方式，可防止float出边框，见Overflow section  </td>
+</tr>
+</tbody>
+</table>
+<h5 id="Inline-block"><a href="#Inline-block" class="headerlink" title="Inline-block"></a>Inline-block</h5><p><code>display: inline-block</code> 效果等同于多个box时的 <code>float: left</code> 和 <code>clear: left</code> 的结合 ，可以更简单地表示相同的效果。  </p>
+<blockquote>
+<p>但是两种表达方式本质上是不同的，float是漂浮在XXX之上，而display是指定element以什么方式表现出来。   </p>
+</blockquote>
+<h2 id="css-Align"><a href="#css-Align" class="headerlink" title="css Align"></a>css Align</h2><ol>
+<li><strong>center Align Elements</strong> : <code>margin: auto;</code>  </li>
+<li><strong>Center Align Text</strong> : <code>text-align: center</code>  </li>
+<li><strong>Center an Image</strong> :  <code>margin: auto; display: block;</code> image默认是inline的element，所以要定制成block。  </li>
+<li><strong>Left/Right Aligh</strong> :  <ul>
+<li><strong>using position</strong> : <code>position: absolute; right: 0px;</code>  </li>
+<li><strong>using float</strong> : <code>float: right;</code>  </li>
+</ul>
+</li>
+<li><strong>Center Vertically</strong> :<ul>
+<li><strong>using padding</strong> : <code>padding: 50px 0;</code>  </li>
+<li><strong>using line-height</strong> : <code>line-height</code> 和 <code>height</code> 的值设成一样的； <strong>line-height</strong> 是text的高度。</li>
+<li><strong>Using position &amp; transform</strong> : <code>transform: translate(-50%, -50%);</code>  </li>
+</ul>
+</li>
+</ol>
+<h2 id="css-Combinators"><a href="#css-Combinators" class="headerlink" title="css Combinators"></a>css Combinators</h2><table>
+<thead>
+<tr>
+<th>Combinator</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>div p</code></td>
+<td>descendant seletor 所有后代</td>
+</tr>
+<tr>
+<td><code>div &gt; p</code></td>
+<td>child selector 直系子女，不跨代  </td>
+</tr>
+<tr>
+<td><code>div + p</code></td>
+<td>adjacent sibling selector 相邻的兄弟element  </td>
+</tr>
+<tr>
+<td><code>div ~ p</code></td>
+<td>general sibling selector 普通的后续所有兄弟element  </td>
+</tr>
+</tbody>
+</table>
+<h2 id="css-Pseudo-classes"><a href="#css-Pseudo-classes" class="headerlink" title="css Pseudo-classes"></a>css Pseudo-classes</h2><blockquote>
+<p>A pseudo-class is used to define a special state of an element.</p>
+</blockquote>
+<h5 id="Syntax"><a href="#Syntax" class="headerlink" title="Syntax"></a>Syntax</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">selector:pseudo-class &#123;property:value;&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>Anchor Pseudo-classes:<br><code>a:link/visited/hover/active</code>  </li>
+<li>Pseudo-classes and css classes:<br><code>a.highlight:hover</code> 类和伪类的组合， <code>hightlight</code>是类名    </li>
+<li>Hover on <code>&lt;div&gt;</code><br><code>div:hover {background-color: blue;}</code>  </li>
+<li>Tooltip Hover : <strong>是combinator和hover的结合</strong>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">p &#123;display: none;&#125;</span><br><span class="line">div:hover p &#123;display: block;&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>注：就是先隐藏 <code>p</code> element，然后用 <code>div:hover</code> 显示。  </p>
+<ol>
+<li><code>：first-child</code> Pseudo-classes  <ul>
+<li><code>p:first-child {color: blue;}</code>  </li>
+<li><code>p i:first-child {color: blue;}</code>  </li>
+<li><code>p:first-child i {color: blue;}</code>  </li>
+</ul>
+</li>
+<li><code>:lang</code> Pseudo-classes  </li>
+</ol>
+<h2 id="css-Pseudo-element"><a href="#css-Pseudo-element" class="headerlink" title="css Pseudo-element"></a>css Pseudo-element</h2><h5 id="syntax"><a href="#syntax" class="headerlink" title="syntax"></a>syntax</h5><blockquote>
+<p>selector::pseudo-element {property:value;}  </p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>selector</th>
+<th>example description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>::after</td>
+<td>p::after , insert sth. after each <code>&lt;p&gt;</code> element</td>
+</tr>
+<tr>
+<td>::before</td>
+<td>p::before , insert sth. before each <code>&lt;p&gt;</code> element</td>
+</tr>
+<tr>
+<td>::first-letter</td>
+<td>p::first-letter , selects the first letter of each <code>&lt;p&gt;</code> element</td>
+</tr>
+<tr>
+<td>::first-line</td>
+<td>p::first-line , selects the first line of each <code>&lt;p&gt;</code> element</td>
+</tr>
+<tr>
+<td>::selection</td>
+<td>p::selection , selects the portion of an element that is selected by a user  </td>
+</tr>
+</tbody>
+</table>
+<h5 id="Pseudo-element-and-css-classes"><a href="#Pseudo-element-and-css-classes" class="headerlink" title="Pseudo-element and css classes"></a>Pseudo-element and css classes</h5><p>e.g. <code>p.XYZ::first-letter{color:...}</code> XYZ是class。</p>
+<h5 id="Multiple-Pseudo-elements"><a href="#Multiple-Pseudo-elements" class="headerlink" title="Multiple Pseudo-elements"></a>Multiple Pseudo-elements</h5><p><code>p::first-letter</code> and <code>p::first-line</code> 二者的作用域有重叠，（注：后者不更改前者已经生效的）  </p>
+<h2 id="css-Opacity-Transparency"><a href="#css-Opacity-Transparency" class="headerlink" title="css Opacity / Transparency"></a>css Opacity / Transparency</h2><h5 id="syntax-and-e-g"><a href="#syntax-and-e-g" class="headerlink" title="syntax and e.g. :"></a>syntax and e.g. :</h5><blockquote>
+<p>selector { opacity: 0.0-1.0 ; }  </p>
+<p>img { opacity: 0.5; }<br>img:hover {opacity: 1.0; }</p>
+<p>div { opacity: }<br>div { background: <strong>rgba</strong>(255, 255, 255, 0.1) } <strong>a</strong> 即opacity   </p>
+</blockquote>
+<p><strong>注：</strong> 两种方式： <code>opacity：</code> 和 <code>rgba（）</code>  </p>
+<h2 id="css-Navigation-Bar"><a href="#css-Navigation-Bar" class="headerlink" title="css Navigation Bar"></a>css Navigation Bar</h2><p><strong>Navigation Bar = List of links</strong>   </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">ul &#123; list-style-type: none;</span><br><span class="line">     margin: 0; padding: 0;&#125;  </span><br><span class="line">li a &#123; display: block;&#125;  </span><br><span class="line">li a:hover &#123; background-color: #555;&#125;</span><br><span class="line">```    </span><br><span class="line">1. Vertical Navigation Bar  </span><br><span class="line">2. Horizontal Navigation Bar  </span><br><span class="line">  - Inline List : `li &#123; display: inline;&#125;`  </span><br><span class="line">  - Floating List : `li &#123; float: left;&#125;`  </span><br><span class="line">1. 其他样式：</span><br><span class="line">  - Border Dividers : `border-right: 1px solid #bbb;`</span><br><span class="line">  - Fixed Navigation Bar : `position: fixed;`  </span><br><span class="line">  - Responsive Nav(Topnav/Sidenav)  随屏幕大小变化导航条  </span><br><span class="line">  - Dropdown Navbar (下拉导航条)  </span><br><span class="line"></span><br><span class="line">## css Dropdowns</span><br></pre></td></tr></table></figure>
+<p>.dropdown-content {<br>    display: none;<br>    position: absolute;}</p>
+<p>.dropdown:hover .dropdown-content {<br>    display: block;}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">**注：** 原理是，先将下拉内容隐藏，然后用 `:hover` 伪类展开。  </span><br><span class="line">**包括：** 文字／菜单／图片等。  </span><br><span class="line"></span><br><span class="line">## css Tooltip  </span><br><span class="line">#### Basic Tooltip  </span><br><span class="line">**简化的代码如下：**</span><br></pre></td></tr></table></figure></p>
+<style>
+.tooltip {
+    position: relative;
+}
+
+.tooltiptext {
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    position: absolute;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+</style>
+
+<p><div class="tooltip">Hover over me<br>  <span class="tooltiptext">Tooltip text</span><br></div><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#### Positioning Tooltips  </span><br><span class="line">1. Right/Left/Top/Bottom Tooltips  </span><br><span class="line">2. Tooltips Arrows  </span><br><span class="line">3. Fade In Tooltips (Animation)  : `opacity: 0 ` `transition: opacity 3s`</span><br><span class="line"></span><br><span class="line">## css Image Gallery  </span><br><span class="line">`float: left ` 就是float排列下而已。跟 **Navigation Bar** 类似，把 `lists` `float` 后排列一样。   </span><br><span class="line">**注：** 今天弄明白一个问题， **类** 指的是一个整体，比如： `.img` 定义的是使用这个类的element的整体的特性（所有子element组成的整体）。若不用 `类`而是直接用 `element`，那么，所有 **元素** 都将具有这个特性，包括 **子元素**，这样会显得很凌乱。  </span><br><span class="line"></span><br><span class="line">## css Image Sprites  </span><br><span class="line">**注：** 将几个图片组合成1个图片，然后通过选择显示不同的区域来使用它，这样可以提升加载效率。  </span><br><span class="line">通常将该图片作为背景，定义在css里。 如：</span><br></pre></td></tr></table></figure></p>
+<p>#home {<br>    width: 46px;<br>    height: 44px;<br>    background: url(img_navsprites.gif) 0 0;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">**备注：** 至于如何 **display** ，可以像Gallery一样 **float到left** ，也可以用 **css组合** ， 组合后用 **position：relative** 和 **position：absolute**  .   </span><br><span class="line"></span><br><span class="line">### css Attr Selectors  </span><br><span class="line">**注：** 选择 `elements` 的 `attribute` ，并设置。   </span><br><span class="line"></span><br><span class="line">Selector|description</span><br><span class="line">---|---</span><br><span class="line">`[attribute]`|所有 **含有该属性** 的，如： `[target]`</span><br><span class="line">`[attribute=&quot;value&quot;]`|属性 **等于某个值** 的，如： `[target=&quot;_blank&quot;]`</span><br><span class="line">`[XXX~=&quot;value&quot;]`|值 **包含单独的** 单词的，如： `[XXX~=&quot;flower&quot;]`</span><br><span class="line">`[attribute｜=&quot;value&quot;]`|属性值以 **某个单词开头** 的，如： `class｜=&quot;top&quot;` 可以为top-  </span><br><span class="line">`[attribute^=&quot;value&quot;]`|以 **某些字符开头** 的， **可以不是完整的单词** ，如： `[class^=&quot;tha&quot;]` 等   </span><br><span class="line">`[attribute$=&quot;value&quot;]`|以 **某些字符结尾** 的， **可以不是单词** ，如： `[class$=&quot;est&quot;]`  </span><br><span class="line">`[attribute＊=&quot;value&quot;]`|包含 **某些字符** 的， **可以不是单词** ，如： `[class*=&quot;te&quot;]`  </span><br><span class="line">##### 两种形式：  </span><br><span class="line">1. select **with class**  : 用类、ID选择。见上  </span><br><span class="line">2. select **with attribute** : 是属性时，用属性选择。见上  </span><br><span class="line"></span><br><span class="line">### css Forms  </span><br><span class="line">用 `input [type=text]` 来选择</span><br><span class="line"></span><br><span class="line">style|Property</span><br><span class="line">---|---</span><br><span class="line">`input`|width/padding/margin/box-sizing/border/color/background-color/background-image    </span><br><span class="line">`input[type=text]:focus`| **outline: none**  </span><br><span class="line">`textarea`|</span><br><span class="line">`select`|</span><br><span class="line">**input button** | `input[type=button], input[type=submit], input[type=reset]`   </span><br><span class="line"></span><br><span class="line">### css Counters</span><br></pre></td></tr></table></figure></p>
+<p>body {<br>    counter-reset: section;<br>}</p>
+<p>h2::before {<br>    counter-increment: section;<br>    content: “Section “ counter(section) “: “;<br>}<br>```  </p>
+<ul>
+<li><code>counter-reset</code> - Creates or resets a counter  <strong>初始值：0</strong>  </li>
+<li><code>counter-increment</code> - Increments a counter value  <strong>值＋1</strong>  </li>
+<li><code>content</code> - Inserts generated content  <strong>内容</strong></li>
+<li><code>counter()</code> or <code>counters()</code> function - Adds the value of a counter to an element   函数只是<strong>显示计数器的值</strong>，counters()嵌套自身</li>
+</ul>
+<p>分界线</p>
+<hr>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8  </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/07/30/css-notes/" data-id="circuk2m50002e05ulp0ui6l5" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-git-note" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -113,7 +665,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/28/git-note/" data-id="cirbs1qzt0002pi5u66dtt7mv" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/28/git-note/" data-id="circuk2nd0006e05uf0rn5q1o" class="article-share-link">Share</a>
       
       
     </footer>
@@ -352,33 +904,7 @@ table tr th {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/24/weichat-stylesheets/" data-id="cirbs1r0j0004pi5uhlkobcoq" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-first" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/06/26/first/" class="article-date">
-  <time datetime="2016-06-26T12:38:16.000Z" itemprop="datePublished">2016-06-26</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="first-git-blog"><a href="#first-git-blog" class="headerlink" title="first git blog"></a>first git blog</h1>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/06/26/first/" data-id="cirbs1r0f0003pi5u5wnljmmp" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/24/weichat-stylesheets/" data-id="circuk2n20004e05uar7yzji5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -424,7 +950,7 @@ table tr th {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/06/26/hello-world/" data-id="cirbs1r0z0005pi5uoio9m27d" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/06/26/hello-world/" data-id="circuk2me0003e05us23xsci6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1008,7 +1534,7 @@ table tr th {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/06/25/html_note/" data-id="cirbs1r120006pi5u4b5ggbjr" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/06/25/html_note/" data-id="circuk2n80005e05ucz0kerqn" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1033,7 +1559,7 @@ table tr th {
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Arkiv</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li></ul>
     </div>
@@ -1043,9 +1569,13 @@ table tr th {
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Siste innlegg</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/07/30/css-notes/">(no title)</a>
+          </li>
         
           <li>
             <a href="/2016/07/28/git-note/">(no title)</a>
@@ -1053,10 +1583,6 @@ table tr th {
         
           <li>
             <a href="/2016/07/24/weichat-stylesheets/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2016/06/26/first/">(no title)</a>
           </li>
         
           <li>
