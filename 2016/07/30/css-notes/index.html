@@ -17,7 +17,7 @@ id selector#para1/p#para1 {color: red; text-align: center;}">
 CSS Selectors
 element selectorp {color: red; text-align: center;}   
 id selector#para1/p#para1 {color: red; text-align: center;}">
-<meta property="og:updated_time" content="2016-08-02T03:27:45.000Z">
+<meta property="og:updated_time" content="2016-08-02T03:39:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS 笔记">
 <meta name="twitter:description" content="CSS syntax and selectorsCSS syntaxp {color: red; text-align: center;}  
@@ -156,13 +156,13 @@ id selector#para1/p#para1 {color: red; text-align: center;}">
 </tbody>
 </table>
 <h2 id="CSS-Borders"><a href="#CSS-Borders" class="headerlink" title="CSS Borders"></a>CSS Borders</h2><ol>
-<li><p><strong>Border</strong><br><code>p {border: 5px solid red;}</code>  </p>
+<li><strong>Border</strong><br><code>p {border: 5px solid red;}</code>   </li>
+</ol>
 <blockquote>
 <p>style 必须指定，其他可以默认   </p>
 </blockquote>
-</li>
-<li><p><strong>Border-style/color/width/radius</strong><br><code>p {Border-style/...: solid dotted dashed;}</code><br>与每个边的对应关系（2-4value）：<br>上下／右左；上／下／右左；上／右／下／左（顺时针）   </p>
-<ul>
+<ol>
+<li><strong>Border-style/color/width/radius</strong><br><code>p {Border-style/...: solid dotted dashed;}</code><br>与每个边的对应关系（2-4value）：<br>上下／右左；上／下／右左；上／右／下／左（顺时针）   <ul>
 <li>style: dotted/dashed/solid/double/groove/ridge/inset/outset/none/hidden/  </li>
 </ul>
 </li>
@@ -526,67 +526,12 @@ id selector#para1/p#para1 {color: red; text-align: center;}">
 <h2 id="css-Pseudo-classes"><a href="#css-Pseudo-classes" class="headerlink" title="css Pseudo-classes"></a>css Pseudo-classes</h2><blockquote>
 <p>A pseudo-class is used to define a special state of an element.</p>
 </blockquote>
-<h5 id="Syntax"><a href="#Syntax" class="headerlink" title="Syntax"></a>Syntax</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">selector:pseudo-class &#123;property:value;&#125;</span><br></pre></td></tr></table></figure>
-<ol>
-<li>Anchor Pseudo-classes:<br><code>a:link/visited/hover/active</code>  </li>
-<li>Pseudo-classes and css classes:<br><code>a.highlight:hover</code> 类和伪类的组合， <code>hightlight</code>是类名    </li>
-<li>Hover on <code>&lt;div&gt;</code><br><code>div:hover {background-color: blue;}</code>  </li>
-<li>Tooltip Hover : <strong>是combinator和hover的结合</strong>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">p &#123;display: none;&#125;</span><br><span class="line">div:hover p &#123;display: block;&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>注：就是先隐藏 <code>p</code> element，然后用 <code>div:hover</code> 显示。  </p>
-<ol>
-<li><code>：first-child</code> Pseudo-classes  <ul>
-<li><code>p:first-child {color: blue;}</code>  </li>
-<li><code>p i:first-child {color: blue;}</code>  </li>
-<li><code>p:first-child i {color: blue;}</code>  </li>
-</ul>
-</li>
-<li><code>:lang</code> Pseudo-classes  </li>
-</ol>
-<h2 id="css-Pseudo-element"><a href="#css-Pseudo-element" class="headerlink" title="css Pseudo-element"></a>css Pseudo-element</h2><h5 id="syntax"><a href="#syntax" class="headerlink" title="syntax"></a>syntax</h5><blockquote>
-<p>selector::pseudo-element {property:value;}  </p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th>selector</th>
-<th>example description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>::after</td>
-<td>p::after , insert sth. after each <code>&lt;p&gt;</code> element</td>
-</tr>
-<tr>
-<td>::before</td>
-<td>p::before , insert sth. before each <code>&lt;p&gt;</code> element</td>
-</tr>
-<tr>
-<td>::first-letter</td>
-<td>p::first-letter , selects the first letter of each <code>&lt;p&gt;</code> element</td>
-</tr>
-<tr>
-<td>::first-line</td>
-<td>p::first-line , selects the first line of each <code>&lt;p&gt;</code> element</td>
-</tr>
-<tr>
-<td>::selection</td>
-<td>p::selection , selects the portion of an element that is selected by a user  </td>
-</tr>
-</tbody>
-</table>
-<h5 id="Pseudo-element-and-css-classes"><a href="#Pseudo-element-and-css-classes" class="headerlink" title="Pseudo-element and css classes"></a>Pseudo-element and css classes</h5><p>e.g. <code>p.XYZ::first-letter{color:...}</code> XYZ是class。</p>
-<h5 id="Multiple-Pseudo-elements"><a href="#Multiple-Pseudo-elements" class="headerlink" title="Multiple Pseudo-elements"></a>Multiple Pseudo-elements</h5><p><code>p::first-letter</code> and <code>p::first-line</code> 二者的作用域有重叠，（注：后者不更改前者已经生效的）  </p>
-<h2 id="css-Opacity-Transparency"><a href="#css-Opacity-Transparency" class="headerlink" title="css Opacity / Transparency"></a>css Opacity / Transparency</h2><h5 id="syntax-and-e-g"><a href="#syntax-and-e-g" class="headerlink" title="syntax and e.g. :"></a>syntax and e.g. :</h5><blockquote>
+<h5 id="Syntax"><a href="#Syntax" class="headerlink" title="Syntax"></a>Syntax</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">selector:pseudo-class &#123;property:value;&#125;</span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line">1. Anchor Pseudo-classes:  </span><br><span class="line"> `a:link/visited/hover/active`  </span><br><span class="line">2. Pseudo-classes and css classes:  </span><br><span class="line">`a.highlight:hover` 类和伪类的组合， `hightlight`是类名    </span><br><span class="line">1. Hover on `&lt;div&gt;`  </span><br><span class="line">`div:hover &#123;background-color: blue;&#125;`  </span><br><span class="line">1. Tooltip Hover : **是combinator和hover的结合**</span><br></pre></td></tr></table></figure>
+<p>p {display: none;}<br>div:hover p {display: block;}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">注：就是先隐藏 `p` element，然后用 `div:hover` 显示。  </span><br><span class="line">1. `：first-child` Pseudo-classes  </span><br><span class="line">  - `p:first-child &#123;color: blue;&#125;`  </span><br><span class="line">  - `p i:first-child &#123;color: blue;&#125;`  </span><br><span class="line">  - `p:first-child i &#123;color: blue;&#125;`  </span><br><span class="line">1. `:lang` Pseudo-classes  </span><br><span class="line"></span><br><span class="line">## css Pseudo-element  </span><br><span class="line">##### syntax  </span><br><span class="line"></span><br><span class="line">`selector::pseudo-element &#123;property:value;&#125;`    </span><br><span class="line"></span><br><span class="line">selector|example description</span><br><span class="line">---|---</span><br><span class="line">::after|p::after , insert sth. after each `&lt;p&gt;` element</span><br><span class="line">::before|p::before , insert sth. before each `&lt;p&gt;` element</span><br><span class="line">::first-letter|p::first-letter , selects the first letter of each `&lt;p&gt;` element</span><br><span class="line">::first-line|p::first-line , selects the first line of each `&lt;p&gt;` element</span><br><span class="line">::selection|p::selection , selects the portion of an element that is selected by a user  </span><br><span class="line"></span><br><span class="line">##### Pseudo-element and css classes  </span><br><span class="line">e.g. `p.XYZ::first-letter&#123;color:...&#125;` XYZ是class。</span><br><span class="line">##### Multiple Pseudo-elements  </span><br><span class="line">`p::first-letter` and `p::first-line` 二者的作用域有重叠，（注：后者不更改前者已经生效的）  </span><br><span class="line"></span><br><span class="line">## css Opacity / Transparency  </span><br><span class="line">##### syntax and e.g. :</span><br></pre></td></tr></table></figure></p>
 <p>selector { opacity: 0.0-1.0 ; }  </p>
 <p>img { opacity: 0.5; }<br>img:hover {opacity: 1.0; }</p>
-<p>div { opacity: }<br>div { background: <strong>rgba</strong>(255, 255, 255, 0.1) } <strong>a</strong> 即opacity   </p>
-</blockquote>
-<p><strong>注：</strong> 两种方式： <code>opacity：</code> 和 <code>rgba（）</code>  </p>
-<h2 id="css-Navigation-Bar"><a href="#css-Navigation-Bar" class="headerlink" title="css Navigation Bar"></a>css Navigation Bar</h2><p><strong>Navigation Bar = List of links</strong>   </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">ul &#123; list-style-type: none;</span><br><span class="line">     margin: 0; padding: 0;&#125;  </span><br><span class="line">li a &#123; display: block;&#125;  </span><br><span class="line">li a:hover &#123; background-color: #555;&#125;</span><br><span class="line">```    </span><br><span class="line">1. Vertical Navigation Bar  </span><br><span class="line">2. Horizontal Navigation Bar  </span><br><span class="line">  - Inline List : `li &#123; display: inline;&#125;`  </span><br><span class="line">  - Floating List : `li &#123; float: left;&#125;`  </span><br><span class="line">1. 其他样式：</span><br><span class="line">  - Border Dividers : `border-right: 1px solid #bbb;`</span><br><span class="line">  - Fixed Navigation Bar : `position: fixed;`  </span><br><span class="line">  - Responsive Nav(Topnav/Sidenav)  随屏幕大小变化导航条  </span><br><span class="line">  - Dropdown Navbar (下拉导航条)  </span><br><span class="line"></span><br><span class="line">## css Dropdowns</span><br></pre></td></tr></table></figure>
+<p>div { opacity: }<br>div { background: <strong>rgba</strong>(255, 255, 255, 0.1) } <strong>a</strong> 即opacity<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">**注：** 两种方式： `opacity：` 和 `rgba（）`  </span><br><span class="line"></span><br><span class="line">## css Navigation Bar  </span><br><span class="line">**Navigation Bar = List of links**</span><br></pre></td></tr></table></figure></p>
+<p>ul { list-style-type: none;<br>     margin: 0; padding: 0;}<br>li a { display: block;}<br>li a:hover { background-color: #555;}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">1. Vertical Navigation Bar  </span><br><span class="line">2. Horizontal Navigation Bar  </span><br><span class="line">  - Inline List : `li &#123; display: inline;&#125;`  </span><br><span class="line">  - Floating List : `li &#123; float: left;&#125;`  </span><br><span class="line">1. 其他样式：</span><br><span class="line">  - Border Dividers : `border-right: 1px solid #bbb;`</span><br><span class="line">  - Fixed Navigation Bar : `position: fixed;`  </span><br><span class="line">  - Responsive Nav(Topnav/Sidenav)  随屏幕大小变化导航条  </span><br><span class="line">  - Dropdown Navbar (下拉导航条)  </span><br><span class="line"></span><br><span class="line">## css Dropdowns</span><br></pre></td></tr></table></figure></p>
 <p>.dropdown-content {<br>    display: none;<br>    position: absolute;}</p>
 <p>.dropdown:hover .dropdown-content {<br>    display: block;}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">**注：** 原理是，先将下拉内容隐藏，然后用 `:hover` 伪类展开。  </span><br><span class="line">**包括：** 文字／菜单／图片等。  </span><br><span class="line"></span><br><span class="line">## css Tooltip  </span><br><span class="line">#### Basic Tooltip  </span><br><span class="line">**简化的代码如下：**</span><br></pre></td></tr></table></figure></p>
 <style>
@@ -623,7 +568,7 @@ id selector#para1/p#para1 {color: red; text-align: center;}">
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/30/css-notes/" data-id="circwmrsf0002zj5uu6z72kbr" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/30/css-notes/" data-id="circx13f000025w5u1bhcogbt" class="article-share-link">Share</a>
       
       
     </footer>
